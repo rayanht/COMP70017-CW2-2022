@@ -49,7 +49,7 @@ contract TicTacToe {
       **/    
     function _threeInALine(uint a, uint b, uint c) private view returns (bool){
         /*Please complete the code here.*/
-        return (a == b) && (b == c);
+        return ((board[a] == board[b]) && (board[b] == board[c]));
     }
 
     /**
@@ -116,7 +116,7 @@ contract TicTacToe {
      */
     function validMove(uint pos) public view returns (bool) {
       /*Please complete the code here.*/
-      return board[pos] == 0;
+      return (board[pos] == 0 && (pos < board.length) && (pos >= 0));
     }
 
     /**
